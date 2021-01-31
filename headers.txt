@@ -1,0 +1,41 @@
+Request Headers
+User-Agent: PostmanRuntime/7.26.10
+	-The app/tool making the call, basically a signature of the browser
+Accept: */*
+	-what is accepted? looks like everything here, but this would specify media types, languages, and character sets
+Postman-Token: fe6a6b06-b20c-44d5-bb4e-da4b2cfe0bdd
+	-postman specific token, probably for some form of authentication
+Host: www.googleapis.com
+	-where did the response come from
+Accept-Encoding: gzip, deflate, br
+	-valid encoding formats, this one specifcies gzip deflate and br
+Connection: keep-alive
+	-whether the connection should be kept alive or not
+
+
+
+Response Headers
+Content-Type: application/json; charset=UTF-8
+	-types of content being returned, here is json using UTF8
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+	-helps determine how to match future request headers
+Content-Encoding: gzip
+	-content is encoded using gzip
+Date: Sun, 31 Jan 2021 21:07:10 GMT
+	-date that the response was sent
+Server: ESF
+	-server type
+Cache-Control: private
+	-tells caching mechanisms whether this can be cached or not -- seems like this one can only be privately cached
+X-XSS-Protection: 0
+	-"cross site scripting" protection, a value of zero probably means its turned off for this req
+X-Frame-Options: SAMEORIGIN
+	-used to indicate whether or not a browser can render this in a frame or similar object, SAMEORIGIN indicates that this can be used in frames, as long as the site including this frame and the origin are the same
+X-Content-Type-Options: nosniff
+	-security settings
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+	-advertises alternative services through which this request can be recieved
+Transfer-Encoding: chunked
+	-specifies the form of encoding, here data is sent in a series of chunks
